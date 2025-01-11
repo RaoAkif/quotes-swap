@@ -55,12 +55,14 @@ main {
     /* Removed background-color: white; */
     scroll-snap-align: start; /* Changed from center to start */
     flex-shrink: 0;
-    font-size: 18px; /* Increased font size for readability */
+    font-size: 32px; /* Increased font size for readability */
     line-height: 1.5;
     display: flex; /* Added for centering text */
     justify-content: center;
     align-items: center;
     text-align: center;
+    font-family: 'Dancing Script', serif; /* Changed font family */
+    font-weight: 400; /* Set font weight */
 }
 
 #add-quote-view {
@@ -68,7 +70,7 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: black;
+    background-color: teal;
 }
 
 #quote-input {
@@ -76,7 +78,7 @@ main {
     height: 150px;
     padding: 10px;
     font-size: 16px;
-    border-radius: 5px;
+    border-radius: 8px;
     resize: none;
     margin-bottom: 20px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
@@ -87,6 +89,7 @@ main {
     font-size: 16px;
     background-color: white;
     color: black;
+    font-weight: bolder;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -108,6 +111,7 @@ nav {
     font-size: 18px;
     cursor: pointer;
     outline: none;
+    font-weight: bolder;
 }
 
 .tab-button.active {
