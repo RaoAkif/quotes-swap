@@ -1,13 +1,3 @@
-/* Add Noori Nastaleeq font */
-@font-face {
-    font-family: 'jameel-noori-nastaleeq';
-    src:  url('https://cdn.jsdelivr.net/gh/tariq-abdullah/urdu-web-font-CDN/JameelNooriNastaleeq.woff') format('woff');
-  }
-
-.urdu-text {
-    font-family: 'Noori Nastaleeq', serif;
-    font-weight: 400; /* Use 400 or 700 based on preference */
-}
 
 /* Reset some basic styles */
 * {
