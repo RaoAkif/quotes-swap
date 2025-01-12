@@ -1,47 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quotes App</title>
-    <link rel="stylesheet" href="styles.css">
-    <!-- Include Font Awesome for the Plus icon -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Noto+Nastaliq+Urdu&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Quotes App</title>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Google Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Noto+Nastaliq+Urdu&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+
+  <!-- Our external stylesheet -->
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <!-- <header>
-        <h1>My Quotes</h1>
-    </header> -->
+  <main>
+    <!-- Collections View -->
+    <div id="collections-view" class="view active">
+      <div id="cards-container">
+        <!-- Quote cards will be dynamically added here -->
+      </div>
+    </div>
 
-    <main>
-        <!-- Collections View -->
-        <div id="collections-view" class="view active">
-            <div id="cards-container">
-                <!-- Quote cards will be dynamically added here -->
-            </div>
+    <!-- Add Quote View -->
+    <div id="add-quote-view" class="view">
+        <div class="quote-container">
+        <h2>Add a New Quote</h2>
+        <textarea id="quote-input" placeholder="Enter your quote here..." aria-label="Quote Input"></textarea>
+        <div class="button-group">
+            <button id="save-quote" disabled>Save Quote</button>
+            <button id="cancel-quote" class="secondary">Cancel</button>
         </div>
-
-        <!-- Add Quote View (hidden by default) -->
-        <div id="add-quote-view" class="view">
-            <textarea id="quote-input" placeholder="Enter your quote here..."></textarea>
-            <button id="save-quote">Save Quote</button>
+        <div id="char-counter">0 / 300</div>
         </div>
-    </main>
+    </div>  
+  </main>
 
-    <nav>
-        <button id="add-tab" class="tab-button">
-            <i class="fas fa-plus"></i>
-        </button>
-        <button id="collections-tab" class="tab-button active">
-            Collections
-        </button>
-    </nav>
+  <nav>
+    <button id="add-tab" class="tab-button">
+      <i class="fas fa-plus"></i>
+    </button>
+    <button id="collections-tab" class="tab-button active">
+      Collections
+    </button>
+  </nav>
 
-    <script src="script.js"></script>
+  <!-- Our external JavaScript -->
+  <script src="script.js"></script>
 </body>
 </html>
