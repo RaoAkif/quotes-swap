@@ -1,3 +1,13 @@
+/* Add Noori Nastaleeq font */
+@font-face {
+    font-family: 'jameel-noori-nastaleeq';
+    src:  url('https://cdn.jsdelivr.net/gh/tariq-abdullah/urdu-web-font-CDN/JameelNooriNastaleeq.woff') format('woff');
+  }
+
+.urdu-text {
+    font-family: 'jameel-noori-nastaleeq', serif;
+    font-weight: 400; /* Use 400 or 700 based on preference */
+}
 
 /* Reset some basic styles */
 * {
@@ -50,22 +60,20 @@ main {
 }
 
 .card {
-    min-width: 100%; /* Changed from 80% to 100% */
-    margin-right: 0; /* Removed right margin */
+    min-width: 100%;
+    margin-right: 0;
     padding: 20px;
-    /* Removed background-color: white; */
-    scroll-snap-align: start; /* Changed from center to start */
+    scroll-snap-align: start;
     flex-shrink: 0;
-    font-size: 32px; /* Increased font size for readability */
+    font-size: 32px;
     line-height: 1.5;
-    display: flex; /* Added for centering text */
+    display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    font-family: 'Dancing Script', serif; /* Changed font family */
-    font-weight: 400; /* Set font weight */
+    font-family: 'jameel-noori-nastaleeq', serif;
+    font-weight: 400;
     width: 90vw;
-    font-family: "Jameel Noori Nastaleeq";
 }
 
 #add-quote-view {

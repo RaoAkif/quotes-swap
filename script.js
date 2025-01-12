@@ -13,8 +13,6 @@ const cardsContainer = document.getElementById('cards-container');
 const colors = [
     '#0496FF',
     '#F06449',
-    '#DADAD9',
-    '#36382E',
     '#5BC3EB',
     '#21897E',
     '#49A078',
@@ -31,11 +29,8 @@ const colors = [
 // Initialize collections from localStorage or empty array
 let collections = JSON.parse(localStorage.getItem('collections')) || [];
 
-// Function to check if text contains Urdu characters
-function isUrdu(text) {
-    const urduRegex = /[\u0600-\u06FF]/;
-    return urduRegex.test(text);
-}
+// Initialize color index
+let colorIndex = 0;
 
 // Function to switch views
 function showView(view) {
@@ -78,10 +73,6 @@ function renderCollections() {
         card.textContent = quote;
         // Assign background color
         card.style.backgroundColor = colors[index % colors.length];
-        // Assign Urdu font if the quote contains Urdu characters
-        if (isUrdu(quote)) {
-            card.classList.add('urdu-text');
-        }
         cardsContainer.appendChild(card);
     });
 }
